@@ -4,13 +4,10 @@ var doc = context.document
 
 	var app = NSApplication.sharedApplication(),
 		selected = context.selection.firstObject(),
-		textAsLayer = selected.stringValue(),
-		layerToString = String(textAsLayer),
 		characters = 0,
 		words = 0,
 		whitespace = 0,
 		paragraphs = 0,
-		range;
 		counted;
 
 
@@ -33,13 +30,16 @@ var doc = context.document
 			//gets location value from NSRange Location, x characters forward from location
 			var lengthSelection = partialSelectedPosition["length"];
 			// Extracts highlighted text based on given selected NSRange
-			var partialSelectedTextToString = selected.stringValue().substr(locationSelection, lengthSelection);
+			text = selected.stringValue().substr(locationSelection, lengthSelection);
 
-			characters = partialSelectedTextToString.length;
-			words = partialSelectedTextToString.trim().split(" ").length;
-			whitespace = partialSelectedTextToString.trim().split(' ').length - 1;
-			paragraphs = partialSelectedTextToString.trim().split('\n').length;
+			characters = text.length;
+			words = text.trim().split(" ").length;
+			whitespace = text.trim().split(' ').length - 1;
+			paragraphs = text.trim().split('\n').length;
 		} else {
+			textAsLayer = selected.stringValue(),
+			layerToString = String(textAsLayer),
+
 			characters = layerToString.length;
 			words = layerToString.split(' ').length;
 			whitespace = layerToString.split(' ').length - 1;
