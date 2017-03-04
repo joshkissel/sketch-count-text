@@ -27,7 +27,7 @@ var doc = context.document
 		} else if (selected.isEditingText()) {
 
 			//Creates an NSRange of the higlighted text
-			var partialSelectedPosition = selected.editingDelegate().textView().selectedRange();\
+			var partialSelectedPosition = selected.editingDelegate().textView().selectedRange();
 			//gets location value from NSRange Location, location = x characters in
 			var locationSelection = partialSelectedPosition["location"];
 			//gets location value from NSRange Location, x characters forward from location
