@@ -6,6 +6,6 @@ Counts: characters, words, whitespace, and paragraphs
 2. Press `Command + Shift + C` or go and click `Plugins > Count Characters`
 
 ## Installation
-1. Download repo .zip file
+1. [Download repo .zip file](https://github.com/joshkissel/sketch-count-characters/archive/master.zip)
 1. Extract .zip file
 1. Double click `.sketchplugin` to install
