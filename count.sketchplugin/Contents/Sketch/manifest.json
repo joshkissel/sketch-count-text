@@ -1,0 +1,25 @@
+{
+	"name": "Count",
+	"description": "Sketch plugin to count characters, words, white space, and paragraphs.",
+	"author": "Josh Kissel",
+	"homepage": "http://github.com/joshkissel/",
+	"version": "1.0",
+	"identifier": "com.joshkissel.sketch.sketch-count-characters",
+	"compatibleVersion": "3",
+	"bundleVersion": "1",
+	"commands": [
+		{
+			"name": "Count Characters",
+			"identifier": "count",
+			"shortcut": "command shift c",
+			"script": "counter.js",
+			"handler": "count"
+		}
+	],
+	"menu": {
+		"isRoot" : true,
+		"items": [
+			"count"
+		]
+	}
+}
