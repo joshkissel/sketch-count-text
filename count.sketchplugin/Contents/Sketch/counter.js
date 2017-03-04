@@ -33,9 +33,9 @@ var doc = context.document
 			text = selected.stringValue().substr(locationSelection, lengthSelection);
 
 			characters = text.length;
-			words = text.trim().split(" ").length;
+			words = text.trim().split(' ').length;
 			whitespace = text.trim().split(' ').length - 1;
-			paragraphs = text.trim().split('\n').length;
+			paragraphs = text.trim().replace(/\n$/gm, '').split(/\n/).length;
 		} else {
 			textAsLayer = selected.stringValue(),
 			layerToString = String(textAsLayer),
@@ -43,7 +43,7 @@ var doc = context.document
 			characters = layerToString.length;
 			words = layerToString.split(' ').length;
 			whitespace = layerToString.split(' ').length - 1;
-			paragraphs = layerToString.split('\n').length;
+			paragraphs = layerToString.replace(/\n$/gm, '').split(/\n/).length;
 	}
 
 
