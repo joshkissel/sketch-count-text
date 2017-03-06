@@ -1,4 +1,4 @@
-# Sketch-Count-Characters
+# Sketch-Count-Text
 Counts: characters, words, whitespace, and paragraphs
 
 ## How To
